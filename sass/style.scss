@@ -1,0 +1,151 @@
+//font
+@font-face {
+	font-family: "semi";
+	src:url('../font/Poppins-SemiBold.ttf');
+}
+@font-face {
+	font-family: "light";
+	src:url('../font/Poppins-Light.ttf');
+}
+@font-face {
+	font-family: "regular";
+	src:url('../font/Poppins-Regular.ttf');
+}
+
+
+// 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f6c6b3;
+    background-image: linear-gradient(to bottom, #e5b6c8 , #B0DDE0 );
+    background-repeat: no-repeat;
+    height: 100vh;    
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .card{
+            width: 350px;
+            height: 550px;
+            background-color: #fff;
+
+            .card-header{
+                width: 100%;
+                height: 350px;
+                background-color: #efeee7;
+                // background-color: #ff0000;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                img{
+                    width: 350px;
+
+                }
+            }
+            .card-body{
+                h1{
+                    font-size: 1.5rem;
+                    font-family: 'semi';
+                    text-align: center;
+                    margin-top: 20px ;
+                }
+                p:nth-child(2){
+                    font-size: .9rem;
+                    font-family: 'light';
+                    text-align: center;
+                    margin-top: -5px ;
+                }
+
+                .main{
+                    margin-top: -10px;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    font-family: 'light';
+                    padding: 0 15px;
+                    position: relative;
+                    .music{
+                        position: absolute;
+                        z-index: 999;
+                        .panjang{
+                            width: 240px;
+                            height: 2px;
+                            background-color: #f6c6b3;
+                        }
+                        .range{
+                            position: absolute;
+                            width: 7px;
+                            height: 7px;
+                            background-color: #f69a86;
+                            border-radius: 50%;
+                            top:-2px;
+                            animation: rangejalan 170.13551s ease-in-out forwards;
+                        }
+                    }
+                }
+            }
+            .card-footer{
+                position: relative;
+                margin-top: -15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .bulat-play{
+                    width: 50px;
+                    height: 50px;
+                    background-color: #63dab0;
+                    border-radius: 50%;
+                    display: flex;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    justify-content: space-around;
+                    align-items: center;
+                    cursor: pointer;
+
+                    .play-1{
+                        width: 7px;
+                        height: 20px;
+                        background-color: white;
+                        cursor: pointer;
+                    }
+                    .play-2{
+                        width: 7px;
+                        height: 20px;
+                        background-color: white;
+                        cursor: pointer;
+                    }
+                    .paused{
+                        // display: none;
+                        margin-left: 20px;
+                        border: 15px solid transparent;
+                        border-left-color:white ;
+                    }
+                }
+                .bulat-play:hover{
+                    cursor: pointer;
+                }
+                audio{
+                    overflow: hidden;
+                    display: none;
+
+                }
+            }
+        }
+    }
+}
+
+
+@keyframes rangejalan {
+    0%{
+        transform: translate(0);
+    }
+    100%{
+        transform: translate(240px);
+    }
+}

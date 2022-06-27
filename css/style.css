@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "semi";
+  src: url("../font/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "light";
+  src: url("../font/Poppins-Light.ttf");
+}
+
+@font-face {
+  font-family: "regular";
+  src: url("../font/Poppins-Regular.ttf");
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e5b6c8), to(#B0DDE0));
+  background-image: linear-gradient(to bottom, #e5b6c8, #B0DDE0);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .card {
+  width: 350px;
+  height: 550px;
+  background-color: #fff;
+}
+
+body .container .card .card-header {
+  width: 100%;
+  height: 350px;
+  background-color: #efeee7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .container .card .card-header img {
+  width: 350px;
+}
+
+body .container .card .card-body h1 {
+  font-size: 1.5rem;
+  font-family: 'semi';
+  text-align: center;
+  margin-top: 20px;
+}
+
+body .container .card .card-body p:nth-child(2) {
+  font-size: .9rem;
+  font-family: 'light';
+  text-align: center;
+  margin-top: -5px;
+}
+
+body .container .card .card-body .main {
+  margin-top: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'light';
+  padding: 0 15px;
+}
+
+body .container .card .card-body .main .music {
+  position: relative;
+}
+
+body .container .card .card-body .main .music .panjang {
+  width: 240px;
+  height: 2px;
+  background-color: #f6c6b3;
+}
+
+body .container .card .card-body .main .music .range {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #f69a86;
+  border-radius: 50%;
+  top: -2px;
+  -webkit-animation: rangejalan 170.13551s ease-in-out forwards;
+          animation: rangejalan 170.13551s ease-in-out forwards;
+}
+
+body .container .card .card-footer {
+  position: relative;
+  margin-top: -15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .card .card-footer .bulat-play {
+  width: 50px;
+  height: 50px;
+  background-color: #63dab0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+body .container .card .card-footer .bulat-play .play-1 {
+  width: 7px;
+  height: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+body .container .card .card-footer .bulat-play .play-2 {
+  width: 7px;
+  height: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+body .container .card .card-footer .bulat-play .paused {
+  margin-left: 20px;
+  border: 15px solid transparent;
+  border-left-color: white;
+}
+
+body .container .card .card-footer .bulat-play:hover {
+  cursor: pointer;
+}
+
+body .container .card .card-footer audio {
+  overflow: hidden;
+  display: none;
+}
+
+@-webkit-keyframes rangejalan {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(240px);
+            transform: translate(240px);
+  }
+}
+
+@keyframes rangejalan {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(240px);
+            transform: translate(240px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
