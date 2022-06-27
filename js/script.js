@@ -45,6 +45,7 @@ bulat.addEventListener('click', ()=>{
 
     if (penghitung === 0) {
         ini();
+        valuerange.classList.add('baka');
     }
 
 if (penghitung %2 == 0) {
@@ -58,6 +59,7 @@ if (penghitung %2 == 0) {
     play1.style.display = 'none';
     paly2.style.display = 'none';
     berhenti()
+    durasisaatini = durasisaatini;
 }
 penghitung++;
 

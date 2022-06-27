@@ -25,7 +25,7 @@ body {
           align-items: center;
   margin: 0;
   padding: 0;
-  background-color: red;
+  background-color: #f6c6b3;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e5b6c8), to(#B0DDE0));
   background-image: linear-gradient(to bottom, #e5b6c8, #B0DDE0);
   background-repeat: no-repeat;
@@ -95,6 +95,7 @@ body .container .card .card-body .main {
           align-items: center;
   font-family: 'light';
   padding: 0 15px;
+  position: relative;
 }
 
 body .container .card .card-body .main .music {
@@ -114,8 +115,11 @@ body .container .card .card-body .main .music .range {
   background-color: #f69a86;
   border-radius: 50%;
   top: -2px;
-  -webkit-animation: rangejalan 170.13551s ease-in-out forwards;
-          animation: rangejalan 170.13551s ease-in-out forwards;
+}
+
+body .container .card .card-body .main .music .baka {
+  -webkit-animation: rangejalan 170.13s ease-in-out forwards;
+          animation: rangejalan 170.13s ease-in-out forwards;
 }
 
 body .container .card .card-footer {
@@ -186,8 +190,8 @@ body .container .card .card-footer audio {
             transform: translate(0);
   }
   100% {
-    -webkit-transform: translate(240px);
-            transform: translate(240px);
+    -webkit-transform: translate(235px);
+            transform: translate(235px);
   }
 }
 
@@ -197,8 +201,8 @@ body .container .card .card-footer audio {
             transform: translate(0);
   }
   100% {
-    -webkit-transform: translate(240px);
-            transform: translate(240px);
+    -webkit-transform: translate(235px);
+            transform: translate(235px);
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -71,8 +71,7 @@ body{
                     padding: 0 15px;
                     position: relative;
                     .music{
-                        position: absolute;
-                        z-index: 999;
+                        position: relative;
                         .panjang{
                             width: 240px;
                             height: 2px;
@@ -85,7 +84,9 @@ body{
                             background-color: #f69a86;
                             border-radius: 50%;
                             top:-2px;
-                            animation: rangejalan 170.13551s ease-in-out forwards;
+                        }
+                        .baka{
+                            animation: rangejalan 170.13s ease-in-out forwards;
                         }
                     }
                 }
@@ -146,6 +147,6 @@ body{
         transform: translate(0);
     }
     100%{
-        transform: translate(240px);
+        transform: translate(235px);
     }
 }
