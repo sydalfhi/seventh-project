@@ -59,7 +59,6 @@ if (penghitung %2 == 0) {
     play1.style.display = 'none';
     paly2.style.display = 'none';
     berhenti()
-    durasisaatini = durasisaatini;
 }
 penghitung++;
 
