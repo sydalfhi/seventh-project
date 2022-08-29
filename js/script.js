@@ -135,7 +135,7 @@ function putValue() {
 // ! dark pada dark mode
 
  function hitam() {
-    theme = 'black'
+    theme = 'DARK'
     document.body.style.backgroundColor = "#0b0b0b";
     document.body.style.color = "#e0e0e0";
     pemutarmusik.style.backgroundColor = "#0a0a0a";
@@ -146,7 +146,7 @@ function putValue() {
 // ? white
 // ! putih pada dark mode
  function putih() {
-    theme = 'white';
+    theme = 'LIGHT';
     daftarMusik.style.color = "#3a3a3a";
     document.body.style.backgroundColor = "#e0e0e0";
     document.body.style.color = "#3a3a3a";
@@ -251,14 +251,14 @@ kembaliKeMusik.addEventListener('click',()=>{
 
 
 // ! ===================================
-let theme = 'white'
+let theme = 'LPGHT'
 tombol.addEventListener("click",()=>{
-    if (theme == "white") {
+    if (theme == "LIGHT") {
             hitam()   ;
-            tombol.innerHTML = "putih"
+            tombol.innerHTML = "LIGHT"
         }else{
             putih();
-            tombol.innerHTML = "hitam"
+            tombol.innerHTML = "DARK"
     }
 });
 
