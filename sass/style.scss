@@ -11,29 +11,56 @@
 	font-family: "regular";
 	src:url('../font/Poppins-Regular.ttf');
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+// ? scrollbar
+    ::-webkit-scrollbar{
+        width: 13px;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: blueviolet;
+        border-top-right-radius: 113px;
+        border-bottom-right-radius: 113px;
+    }
+    ::-webkit-scrollbar-thumb{
+        border: 3px solid blueviolet;
+        background-color: #e0e0e0;
+        border-radius: 113px;
+    }
 
-
-// 
+// ?
 body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
     padding: 0;
-    background-color: #f6c6b3;
-    background-image: linear-gradient(to bottom, #e5b6c8 , #B0DDE0 );
-    background-repeat: no-repeat;
-    height: 100vh;    
+    background-color: #e0e0e0;
+    overflow: hidden;
 
     .container{
+        width: 80%;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
+        margin-top: 50px;
         
         .card{
+            position: relative;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            overflow: hidden;
+            border-radius: 50px;
+            background: #e0e0e0;
+            box-shadow:  5px 5px 10px #bebebe,
+                        -5px -5px 10px #ffffff;
+                        margin-right: 40px;
+            .panah{
+                    width: 0%;
+                  
+            }
+
             width: 350px;
-            height: 550px;
-            background-color: #fff;
+            height: 565px;
+
 
             .card-header{
                 width: 100%;
@@ -44,7 +71,9 @@ body{
                 justify-content: center;
                 align-items: flex-end;
                 img{
-                    width: 350px;
+                    width: 200%;
+                    margin-top: 50px;
+                    // margin-left: 150px;
 
                 }
             }
@@ -65,42 +94,47 @@ body{
                 .main{
                     margin-top: -10px;
                     display: flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     align-items: center;
                     font-family: 'light';
                     padding: 0 15px;
                     position: relative;
-                    .music{
-                        position: relative;
-                        .panjang{
-                            width: 240px;
-                            height: 2px;
-                            background-color: #f6c6b3;
-                        }
-                        .range{
-                            position: absolute;
-                            width: 7px;
-                            height: 7px;
-                            background-color: #f69a86;
-                            border-radius: 50%;
-                            top:-2px;
-                        }
-                        .baka{
-                            animation: rangejalan 170.13s ease-in-out forwards;
-                        }
+                    p{
+                        // font-family: 'Roboto', sans-serif;
+                        font-family: 'regular';
+                    }
+                    .tampilanDurasi{
+                        position: absolute;
+                        width: 225px;
+                        top: 17px;
+                        left: 60px  ;
+                        accent-color: blueviolet;
                     }
                 }
+
             }
             .card-footer{
                 position: relative;
                 margin-top: -15px;
                 display: flex;
-                justify-content: center;
+                justify-content: space-evenly;
                 align-items: center;
+                .segi1{
+                    border: 15px solid transparent;
+                    // border-right-color:#e0e0e0 ;
+                    border-right-color:blueviolet ;
+                    cursor: pointer;
+                }
+                .segi2{
+                    cursor: pointer;
+                    border: 15px solid transparent;
+                    border-left-color:blueviolet ;
+
+                }
                 .bulat-play{
                     width: 50px;
                     height: 50px;
-                    background-color: #63dab0;
+                    background-color: blueviolet;
                     border-radius: 50%;
                     display: flex;
                     padding: 10px;
@@ -112,20 +146,21 @@ body{
                     .play-1{
                         width: 7px;
                         height: 20px;
-                        background-color: white;
+                        background-color: #e0e0e0;
                         cursor: pointer;
                     }
                     .play-2{
                         width: 7px;
                         height: 20px;
-                        background-color: white;
+                        background-color: #e0e0e0;
                         cursor: pointer;
                     }
                     .paused{
                         // display: none;
+                        transform: scale(.95);
                         margin-left: 20px;
                         border: 15px solid transparent;
-                        border-left-color:white ;
+                        border-left-color:#e0e0e0 ;
                     }
                 }
                 .bulat-play:hover{
@@ -138,15 +173,168 @@ body{
                 }
             }
         }
+
+
+
+
+        .kartu{
+            overflow-x: hidden;
+            overflow-y: scroll;
+            width: 350px;
+            height: 565px;
+            border-top-left-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            background: #e0e0e0;
+            box-shadow:  5px 5px 10px #bebebe,
+                        -5px -5px 10px #ffffff;
+                        position: relative;
+                        flex-direction: column;
+                        color: #333 ;
+                        font-family: 'regular';
+                        .panah{
+                            width: 0%;
+                            z-index: 99;
+                    }
+                        .fitur{
+                            width: 100%;
+                            height: 50px;
+                            background-color: blueviolet;
+                            transform: translateY(-30px);
+                            margin-bottom: -10px;
+                        }
+                        .content{
+                padding: 10px 20px;
+                .musik{
+                    overflow: hidden;
+                padding-left: 10px;
+                // background-color: rgb(192, 192, 192);
+                width: 100%;
+                height: 100px;
+                display: flex;
+                align-items: center;    
+                cursor: pointer;
+                transition: .2s;
+                border-radius: 10px;
+                &:hover{
+                    background-color: #fff;
+                    color: #3e3e3e;
+
+                }
+                .thumb{
+                    border-radius: 12px;
+                    width: 70px;
+                    height: 70px;
+                    background-color: #3d3d3d;
+                    margin-right: 30px;
+                }
+                .desk{
+                    h1{
+                        margin-bottom: 0px;
+                        font-size: 1.4rem;
+                    }
+                    p{
+                        margin-top: -5px;
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
     }
 }
+}
 
+button{
+    transform: translate(245px,13px);
+    border: none;
+    border: 3px solid white;
+    color: white;
+    border-radius: 113px;
+    background-color: transparent;
+    text-transform: uppercase;
+    font-family: "regular";
+    padding: 0 10px;
+    font-weight: 400;
 
-@keyframes rangejalan {
-    0%{
-        transform: translate(0);
+    &:hover{
+        cursor: pointer;
     }
-    100%{
-        transform: translate(235px);
+
+}
+
+@media screen and (max-width:854px) {
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        overflow-y: scroll;
+        .container{
+            margin-top: 15vh;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+            row-gap: 40px;
+            
+            .kartu{
+                display: none;
+                margin: auto;
+                width: 320px;
+                height: 80vh;
+                margin-top: -50px;
+                border-radius: 50px;
+                .panah{
+                    filter: brightness(100);
+                    position: absolute;
+                    width: 10%;
+                    transform: rotate(180deg) translate(-25px,-15px);
+                    
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+                .fitur{
+                    padding-bottom: 30px;
+                    // height: 200px;
+                    transform: translateY(0px);
+                    background-color: blueviolet;
+                    button{
+                        color: white;
+                        outline: 3px solid white;
+                        transform: translate(230px,20px);
+                    }
+                }
+                
+            }
+            .card{
+
+                margin: auto;
+                
+                width: 320px;
+
+                .panah{
+                    filter: brightness(100);
+                    position: absolute;
+                    width: 10%;
+                    transform: rotate(180deg) translate(-25px,-15px);
+                    
+                    &:hover{
+                        transition: .7s;
+                        cursor: pointer;
+                    }
+                }
+                .card-body{
+                    .main{
+
+                        .tampilanDurasi{
+                            width: 195px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

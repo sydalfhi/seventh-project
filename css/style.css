@@ -1,208 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @font-face {
   font-family: "semi";
   src: url("../font/Poppins-SemiBold.ttf");
 }
-
 @font-face {
   font-family: "light";
   src: url("../font/Poppins-Light.ttf");
 }
-
 @font-face {
   font-family: "regular";
   src: url("../font/Poppins-Regular.ttf");
 }
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: blueviolet;
+  border-top-right-radius: 113px;
+  border-bottom-right-radius: 113px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid blueviolet;
+  background-color: #e0e0e0;
+  border-radius: 113px;
+}
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
+  justify-content: center;
+  align-items: center;
   padding: 0;
-  background-color: #f6c6b3;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e5b6c8), to(#B0DDE0));
-  background-image: linear-gradient(to bottom, #e5b6c8, #B0DDE0);
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-color: #e0e0e0;
+  overflow: hidden;
 }
-
 body .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  width: 80%;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
 }
-
 body .container .card {
+  position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  overflow: hidden;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+  margin-right: 40px;
   width: 350px;
-  height: 550px;
-  background-color: #fff;
+  height: 565px;
 }
-
+body .container .card .panah {
+  width: 0%;
+}
 body .container .card .card-header {
   width: 100%;
   height: 350px;
   background-color: #efeee7;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: center;
+  align-items: flex-end;
 }
-
 body .container .card .card-header img {
-  width: 350px;
+  width: 200%;
+  margin-top: 50px;
 }
-
 body .container .card .card-body h1 {
   font-size: 1.5rem;
-  font-family: 'semi';
+  font-family: "semi";
   text-align: center;
   margin-top: 20px;
 }
-
 body .container .card .card-body p:nth-child(2) {
-  font-size: .9rem;
-  font-family: 'light';
+  font-size: 0.9rem;
+  font-family: "light";
   text-align: center;
   margin-top: -5px;
 }
-
 body .container .card .card-body .main {
   margin-top: -10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: 'light';
+  justify-content: space-between;
+  align-items: center;
+  font-family: "light";
   padding: 0 15px;
   position: relative;
 }
-
-body .container .card .card-body .main .music {
-  position: relative;
+body .container .card .card-body .main p {
+  font-family: "regular";
 }
-
-body .container .card .card-body .main .music .panjang {
-  width: 240px;
-  height: 2px;
-  background-color: #f6c6b3;
-}
-
-body .container .card .card-body .main .music .range {
+body .container .card .card-body .main .tampilanDurasi {
   position: absolute;
-  width: 7px;
-  height: 7px;
-  background-color: #f69a86;
-  border-radius: 50%;
-  top: -2px;
+  width: 225px;
+  top: 17px;
+  left: 60px;
+  accent-color: blueviolet;
 }
-
-body .container .card .card-body .main .music .baka {
-  -webkit-animation: rangejalan 170.13s ease-in-out forwards;
-          animation: rangejalan 170.13s ease-in-out forwards;
-}
-
 body .container .card .card-footer {
   position: relative;
   margin-top: -15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
+body .container .card .card-footer .segi1 {
+  border: 15px solid transparent;
+  border-right-color: blueviolet;
+  cursor: pointer;
+}
+body .container .card .card-footer .segi2 {
+  cursor: pointer;
+  border: 15px solid transparent;
+  border-left-color: blueviolet;
+}
 body .container .card .card-footer .bulat-play {
   width: 50px;
   height: 50px;
-  background-color: #63dab0;
+  background-color: blueviolet;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
   cursor: pointer;
 }
-
 body .container .card .card-footer .bulat-play .play-1 {
   width: 7px;
   height: 20px;
-  background-color: white;
+  background-color: #e0e0e0;
   cursor: pointer;
 }
-
 body .container .card .card-footer .bulat-play .play-2 {
   width: 7px;
   height: 20px;
-  background-color: white;
+  background-color: #e0e0e0;
   cursor: pointer;
 }
-
 body .container .card .card-footer .bulat-play .paused {
+  transform: scale(0.95);
   margin-left: 20px;
   border: 15px solid transparent;
-  border-left-color: white;
+  border-left-color: #e0e0e0;
 }
-
 body .container .card .card-footer .bulat-play:hover {
   cursor: pointer;
 }
-
 body .container .card .card-footer audio {
   overflow: hidden;
   display: none;
 }
-
-@-webkit-keyframes rangejalan {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  100% {
-    -webkit-transform: translate(235px);
-            transform: translate(235px);
-  }
+body .container .kartu {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 350px;
+  height: 565px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #e0e0e0;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+  position: relative;
+  flex-direction: column;
+  color: #333;
+  font-family: "regular";
+}
+body .container .kartu .panah {
+  width: 0%;
+  z-index: 99;
+}
+body .container .kartu .fitur {
+  width: 100%;
+  height: 50px;
+  background-color: blueviolet;
+  transform: translateY(-30px);
+  margin-bottom: -10px;
+}
+body .container .kartu .content {
+  padding: 10px 20px;
+}
+body .container .kartu .content .musik {
+  overflow: hidden;
+  padding-left: 10px;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+body .container .kartu .content .musik:hover {
+  background-color: #fff;
+  color: #3e3e3e;
+}
+body .container .kartu .content .musik .thumb {
+  border-radius: 12px;
+  width: 70px;
+  height: 70px;
+  background-color: #3d3d3d;
+  margin-right: 30px;
+}
+body .container .kartu .content .musik .desk h1 {
+  margin-bottom: 0px;
+  font-size: 1.4rem;
+}
+body .container .kartu .content .musik .desk p {
+  margin-top: -5px;
+  font-size: 0.8rem;
 }
 
-@keyframes rangejalan {
-  0% {
-    -webkit-transform: translate(0);
-            transform: translate(0);
-  }
-  100% {
-    -webkit-transform: translate(235px);
-            transform: translate(235px);
-  }
+button {
+  transform: translate(245px, 13px);
+  border: none;
+  border: 3px solid white;
+  color: white;
+  border-radius: 113px;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: "regular";
+  padding: 0 10px;
+  font-weight: 400;
 }
-/*# sourceMappingURL=style.css.map */
+button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 854px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+  }
+  body .container {
+    margin-top: 15vh;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    row-gap: 40px;
+  }
+  body .container .kartu {
+    display: none;
+    margin: auto;
+    width: 320px;
+    height: 80vh;
+    margin-top: -50px;
+    border-radius: 50px;
+  }
+  body .container .kartu .panah {
+    filter: brightness(100);
+    position: absolute;
+    width: 10%;
+    transform: rotate(180deg) translate(-25px, -15px);
+  }
+  body .container .kartu .panah:hover {
+    cursor: pointer;
+  }
+  body .container .kartu .fitur {
+    padding-bottom: 30px;
+    transform: translateY(0px);
+    background-color: blueviolet;
+  }
+  body .container .kartu .fitur button {
+    color: white;
+    outline: 3px solid white;
+    transform: translate(230px, 20px);
+  }
+  body .container .card {
+    margin: auto;
+    width: 320px;
+  }
+  body .container .card .panah {
+    filter: brightness(100);
+    position: absolute;
+    width: 10%;
+    transform: rotate(180deg) translate(-25px, -15px);
+  }
+  body .container .card .panah:hover {
+    transition: 0.7s;
+    cursor: pointer;
+  }
+  body .container .card .card-body .main .tampilanDurasi {
+    width: 195px;
+  }
+}/*# sourceMappingURL=style.css.map */
