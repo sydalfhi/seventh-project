@@ -18,7 +18,7 @@ todo         CREAT BY SYAID ALFARISHI
                         // ? 
                         this.durasiTulisan = ["02:50","02:46","03:11","02:08","02:48","03:08"];
                         // ? 
-                        this.namaMusik = ["Hivi-remaja.mp3","mahika.mp3","badboy.mp3","left_and_right.mp3","light_switch.mp3","White_tee.mp3"];
+                        this.namaMusik = ["Hivi-remaja.mp3","mahika.mp3","binBoy.mp3","left_and_right.mp3","light_switch.mp3","White_tee.mp3"];
                         // ? 
                         this.gambarLagu = ["2.jpg","1.jpg","3.jpg","4.jpg","5.jpg","hero.jpg"];
                         // ? 
